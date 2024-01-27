@@ -1,0 +1,66 @@
+﻿@using Microsoft.EntityFrameworkCore;
+
+
+<div class="text-center">
+    
+   
+    @model IEnumerable<DIPLOM123.Models.Turbinecharacteristic>
+    @{
+        ViewBag.Title = "Каталог";
+    }
+    <table>
+        <tr>
+            <th>Станция</th>
+            <th>Город</th>
+            
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model )
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Station.Name)
+                </td>
+              
+                <td>
+                    @Html.DisplayFor(modelItem => item.City.Name)
+                </td>
+                
+            </tr>
+        }
+    </table>
+    
+    
+  @*   <table>
+        <tr>
+            <td><p>Номер города</p></td>
+            <td><p>Название города</p></td>
+            
+            
+        </tr>
+        @foreach (var s in ViewBag.Cities)
+        {
+            <tr>
+                <td><p>@s.Id</p></td>
+                <td><p>@s.Name</p></td>
+            </tr>
+        }
+    </table>
+    <table>
+        <tr>
+            <td><p>Номер города</p></td>
+            <td><p>Название города</p></td>
+
+
+        </tr>
+        @foreach (var s in ViewBag.Stations)
+        {
+            <tr>
+                <td><p>@s.Id</p></td>
+                <td><p>@s.Name</p></td>
+                                    
+            </tr>
+        }
+    </table> *@
+</div>
